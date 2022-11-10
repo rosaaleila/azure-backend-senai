@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "b41cd05c-e754-47e6-bba7-646a160949c9",
+		"name": "DEPLOY-AZURE-BACKEND",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9752073"
+	},
+	"item": [
+		{
+			"name": "read",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://webappdeply-backend.azurewebsites.net/categoria/listarCategoria",
+					"protocol": "https",
+					"host": [
+						"webappdeply-backend",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"categoria",
+						"listarCategoria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome_categoria\":\"TESTE INSERT POSTMAN\",\r\n    \"createdAt\": \"2022-11-09T14:09:35.000Z\",\r\n    \"updatedAt\": \"2022-11-09T14:09:35.000Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://webappdeply-backend.azurewebsites.net/categoria/cadastrarCategoria",
+					"protocol": "https",
+					"host": [
+						"webappdeply-backend",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"categoria",
+						"cadastrarCategoria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"8\",\r\n    \"nome_categoria\":\"-----TESTE INSERT POSTMAN-----\",\r\n    \"createdAt\": \"2022-11-09T14:09:35.000Z\",\r\n    \"updatedAt\": \"2022-11-09T14:09:40.000Z\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://webappdeply-backend.azurewebsites.net/categoria/alterarCategoria",
+					"protocol": "https",
+					"host": [
+						"webappdeply-backend",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"categoria",
+						"alterarCategoria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://webappdeply-backend.azurewebsites.net/categoria/excluirCategoria/8",
+					"protocol": "https",
+					"host": [
+						"webappdeply-backend",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"categoria",
+						"excluirCategoria",
+						"8"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
